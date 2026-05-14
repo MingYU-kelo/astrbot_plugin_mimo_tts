@@ -4,7 +4,7 @@
         "description": "MiMo API Key",
         "type": "string",
         "hint": "从 https://platform.xiaomimimo.com 获取的 API Key",
-        "default": "sk-你的密钥"
+        "default": "sk-youkey"
     },
     "mimo_api_url": {
         "description": "MiMo API 地址",
