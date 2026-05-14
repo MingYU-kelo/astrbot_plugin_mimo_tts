@@ -1,5 +1,4 @@
-{
-    },   
+{  
     "mimo_api_key": {
         "description": "MiMo API Key",
         "type": "string",
