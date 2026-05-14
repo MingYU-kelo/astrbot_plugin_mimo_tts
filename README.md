@@ -57,7 +57,7 @@ git clone https://github.com/MingYU-kelo/astrbot_plugin_mimo_tts
 |--------|------|--------|------|
 | `mimo_api_key` | string | — | MiMo API Key，从 [MiMo 开放平台](https://platform.xiaomimimo.com) 获取 |
 | `mimo_api_url` | string | `https://api.xiaomimimo.com/v1` | API 地址。Token Plan 用户需改为专属地址 |
-| `reference_audio_path` | string | — | 参考音频文件**绝对路径**，用于音色复刻（5~30 秒最佳） |
+| `reference_audio_path` | string | — | 参考音频文件**绝对路径**，推荐使用mp3格式，用于音色复刻（5~30 秒最佳） |
 | `audio_format` | string | `wav` | 输出音频格式：`wav` 兼容性最好，`pcm16` 适合流式 |
 | `request_timeout` | int | `60` | API 请求超时秒数，建议 30~120 |
 
