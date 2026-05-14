@@ -47,6 +47,10 @@ git clone https://github.com/MingYU-kelo/astrbot_plugin_mimo_tts
 
 然后重启 AstrBot 或在 WebUI 中重载插件。
 
+### 方式三：插件市场安装
+
+在插件市场内搜索`MimoTTS音色克隆`后选择安装
+
 ## 配置
 
 所有配置项均可在 WebUI 插件配置面板中修改。
