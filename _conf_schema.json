@@ -1,0 +1,63 @@
+{
+    },   
+    "mimo_api_key": {
+        "description": "MiMo API Key",
+        "type": "string",
+        "hint": "从 https://platform.xiaomimimo.com 获取的 API Key",
+        "default": "sk-你的密钥"
+    },
+    "mimo_api_url": {
+        "description": "MiMo API 地址",
+        "type": "string",
+        "hint": "API Base URL，默认使用官方地址。Token Plan 用户需要改为 token-plan 地址",
+        "default": "https://api.xiaomimimo.com/v1"
+    },
+    "reference_audio_path": {
+        "description": "参考音频路径",
+        "type": "string",
+        "hint": "用于音色复刻的参考音频文件绝对路径。MiMo 支持的输入格式: wav, mp3",
+        "default": "/root/AstrBot/Mimo/Local.wav"
+    },
+    "output_mode": {
+        "description": "语音输出模式",
+        "type": "string",
+        "hint": "dual_output: 文字+语音同时发 | voice_only: 仅语音 | llm_classify: LLM分类器决定",
+        "default": "llm_classify"
+    },
+    "text_mode": {
+        "description": "文本转换模式",
+        "type": "string",
+        "hint": "limit: 超过n字不转换 | all: 全部转换 | first_only: 仅第一段转换",
+        "default": "limit"
+    },
+    "text_length_limit": {
+        "description": "文本长度限制（仅在 limit 模式下生效）",
+        "type": "int",
+        "hint": "超过此长度的文本不进行 TTS 转换",
+        "default": 500
+    },
+    "audio_format": {
+        "description": "音频输出格式（MiMo 支持）",
+        "type": "string",
+        "hint": "MiMo 支持的输出格式: wav, pcm16。wav 兼容性最好可直接播放，pcm16 适合流式场景",
+        "default": "wav"
+    },
+    "request_timeout": {
+        "description": "API 请求超时（秒）",
+        "type": "int",
+        "hint": "建议 30-120 秒，音频生成可能需要较长时间",
+        "default": 60
+    },
+    "classifier_system_prompt": {
+        "description": "分类器 System Prompt",
+        "type": "text",
+        "hint": "分类器的角色设定。可使用 {user_msg} {response_sample} 占位符",
+        "default": "你是一个文本分类器。只回复 voice 或 text，不要回复其他内容。"
+    },
+    "classifier_user_prompt": {
+        "description": "分类器 User Prompt 模板",
+        "type": "text",
+        "hint": "分类提示词模板。{user_msg} 为用户消息，{response_sample} 为 AI 回复前500字",
+        "default": "用户消息：{user_msg}\n\nAI 回复（节选）：{response_sample}\n\n请判断以上 AI 回复应该以「语音」还是「文字」形式输出。\n- 语音：日常闲聊、简单问候、情感交流、生活话题、轻松对话\n- 文字：专业知识问答、长文本说明、技术文档、代码、百科条目、新闻更新、复杂推理\n只回复一个词：voice 或 text"
+    }
+}
