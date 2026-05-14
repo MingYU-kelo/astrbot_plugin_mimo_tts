@@ -3,7 +3,8 @@ short_desc: "基于小米 MiMo V2.5 音色复刻模型，将 AI 文本回复转�
 name: astrbot_plugin_mimo_tts
 desc: "使用 MiMo mimo-v2.5-tts-voiceclone 模型进行音色复刻，提供LLM判断是否启用语音。"
 version: 1.0.0
-author: "local-dev"
+author: "MingYU-kelo"
+repo: "https://github.com/MingYU-kelo/astrbot_plugin_mimo_tts"
 support_platforms:
   - aiocqhttp
 astrbot_version: ">=4.0,<5"
